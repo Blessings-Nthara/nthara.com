@@ -1,39 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Blessings Nthara - Under Development</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f7f7f7;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-            color: #333;
-        }
-        .container {
-            padding: 30px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            font-size: 40px;
-            margin-bottom: 10px;
-            color: #2c3e50;
-        }
-        p {
-            font-size: 20px;
-            color: #555;
-        }
-        .verse {
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blessings Nthara</title>
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/media.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <div id="preloader">
+    <div class="jumping-dots">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+  <header id="header" class="header">
+    <div class="container container-lg">
+      <div class="header-nav">
+        <a href="#home" class="logo">B<span>.</span>Nthara</a>
+        <nav id="nav" class="nav">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="#home" class="nav-link active">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#about" class="nav-link">About</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#contact" class="nav-link">Contact</a>
+            </li>
+          </ul>
+          <button id="nav-btn" class="nav-btn">
+            <img id="nav-btn-img" src="img/icons/open.svg" alt="Navigation button" />
+          </button>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="container container-lg">
+      <div class="hero-row" data-aos="fade-zoom-in" data-aos-easing="ease-in-out" data-aos-delay="1800"
+        data-aos-duration="2000">
+        <div class="hero-content">
+          <span class="hero-greeting"> Hello, I am</span>
+          <h1 class="hero-heading">Blessings Nthara</h1>
+          <span class="hero-heading-subtitle">Software Engineer with a Master's Degree in Computer Science, specializing
+            in Internet of Things (IoT)
+          </span>
+          <div class="about-social-list">
+            <div class="social-links-row">
+              <a href="https://github.com/Blessings-Nthara">
+                <img src="img/social_icons/github.svg" alt="Link to GitHub account" />
+              </a>
+
+              <a href="https://www.linkedin.com/in/blessings-nthara-43141270">
+                <img src="img/social_icons/linkedin.svg" alt="Link to linkedin profile" />
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <a href="#contact" class="btn btn-white">Contact Me</a>
+          </div>
+        </div>
+        <div class="hero-img">
+          <img src="img/BlessingsNthara/BlessingsNthara.png" alt="Blessings Nthara</a>
+              " />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="container">
+      <div class="about-title">
+        <h2 class="title">About Me</h2>
+      </div>
+      <div class="about-row">
+        <div class="about-content">
+          <p class="about-descr">
+            I am an enthusiastic software engineer with a strong foundation in software engineering and programming
+            principles. I have an innate ability to learn and master new technologies. I hold a Bachelor of Science
+            degree in
+            Computer Engineering from Pamukkale University, Turkey. Later, I graduated with a Master's Degree in
+            Computer Science
+            from the University of Salerno (Italy), specializing in the Internet of Things (IoT), achieving a mark of
+            108 out of 110. <br />
+            <br />
+
+          </p>
+        </div>
+        <div class="about-skills">
+          <div class="skill">
+            <div class="skill">
+              <div class="skill-title">JavaScript</div>
+              <div class="skill-percent">90%</div>
+              <div class="skillbar" style="width: 90%"></div>
+            </div>
+            <div class="skill-title">React JS</div>
+            <div class="skill-percent">85%</div>
+            <div class="skillbar" style="width: 85%"></div>
+          </div>
+          <div class="skill">
+            <div class="skill-title">React Native</div>
+            <div class="skill-percent">80%</div>
+            <div class="skillbar" style="width: 80%"></div>
+          </div>
+          <div class="skill">
+            <div class="skill-title">Node JS</div>
+            <div class="skill-percent">75%</div>
+            <div class="skillbar" style="width: 75%"></div>
+          </div>
+          <div class="skill">
+            <div class="skill-title">TypeScript</div>
+            <div class="skill-percent">70%</div>
+            <div class="skillbar" style="width: 70%"></div>
+          </div>
+          <div class="skill">
+            <div class="skill-title">PHP</div>
+            <div class="skill-percent">75%</div>
+            <div class="skillbar" style="width: 75%"></div>
+          </div>
+          <div class="skill">
+            <div class="skill-title">Docker</div>
+            <div class="skill-percent">65%</div>
+            <div class="skillbar" style="width: 65%"></div>
+          </div>
+        </div>
+
+      </div>
+      <div class="services-row">
+        <!-- Frontend Development -->
+        <div class="service-card" data-aos="fade-down">
+          <img class="service-card-img" src="img/services/01.svg" alt="Frontend Development" />
+          <h3 class="service-card-title">Frontend Development</h3>
+          <p>
+            I build responsive and user-friendly interfaces using React.js, along with HTML, CSS, and JavaScript,
+            ensuring a smooth and efficient user experience across devices.
+          </p>
+        </div>
+
+        <!-- Backend Development -->
+        <div class="service-card" data-aos="fade-down">
+          <img class="service-card-img" src="img/services/02.svg" alt="Backend Development" />
+          <h3 class="service-card-title">Backend Development</h3>
+          <p>
+            I work with Node.js and PHP, including the Laravel framework, to build reliable and scalable server-side
+            applications that meet performance and security requirements for web applications.
+          </p>
+        </div>
+
+        <!-- API Development -->
+        <div class="service-card" data-aos="fade-down">
+          <img class="service-card-img" src="img/services/03.svg" alt="API Development" />
+          <h3 class="service-card-title">API Development</h3>
+          <p>
+            I develop clean and efficient RESTful APIs that allow seamless communication between frontend and backend
+            systems, ensuring ease of integration with external services when needed.
+          </p>
+        </div>
+      </div>
+
+
+
+    </div>
+  </section>
+
+
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="contact-title">
+        <h2 class="title">Contact</h2>
+      </div>
+      <div class="contact-content">
+        <p>
+          Tell me about your project.
+          <br />
+          Let's talk and work together!
+        </p>
+        <p>Email: <a href="mailto:blessings@nthara.com">blessings@nthara.com</a></p>
+      </div>
+    </div>
+  </section>
+  <style>
+    .verse-section {
+      background-color: white;
+      padding: 40px 0;
+      text-align: center;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .verse-section .container {
+      width: 80%;
+      max-width: 800px;
+      margin: 0 auto;
+
+    }
+
+    .verse {
             font-size: 24px;
             font-family: 'Georgia', serif;
             color: #2980b9;
@@ -46,6 +221,7 @@
             padding-left: 20px;
             font-style: italic;
         }
+
         .reference {
             font-size: 16px;
             color: #777;
@@ -53,15 +229,47 @@
             font-style: normal;
             font-weight: normal;
         }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Blessings Nthara</h1>
-        <p>Welcome to my portfolio website! It's currently under development. Stay tuned!</p>
+  </style>
 
-        <p class="verse">Trust in the Lord with all your heart; do not depend on your own understanding. Seek his will in all you do, and he will show you which path to take.</p>
-        <p class="reference">— Proverbs 3:5–6 (NLT)</p>
+  <section id="verse-section" class="verse-section">
+    <div class="container">
+      <p class="verse" style=" font-size: 20px;
+            color: #555;">
+        Trust in the Lord with all your heart; do not depend on your own understanding. Seek his will in all you do, and
+        he will show you which path to take.
+      </p>
+      <p class="reference">— Proverbs 3:5–6 (NLT)</p>
     </div>
+  </section>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-row">
+        <div class="social-links-row footer-social">
+          <a href="https://github.com/Blessings-Nthara">
+            <img src="img/social_icons/github.svg" alt="Link to GitHub account" />
+          </a>
+
+          <a href="https://www.linkedin.com/in/blessings-nthara-43141270">
+            <img src="img/social_icons/linkedin.svg" alt="Link to linkedin profile" />
+          </a>
+        </div>
+
+        <div class="footer-copyright">
+          <p>&copy; Copyright Blessings Nthara 2024 </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="goToTop" class="goToTop">
+    <a href="#home">
+      <img src="img/icons/arrow_up.svg" alt="Back to top" /></a>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+    integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="js/main.js"></script>
 </body>
+
 </html>
