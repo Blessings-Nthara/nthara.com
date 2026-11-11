@@ -1,270 +1,417 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blessings Nthara</title>
-  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Blessings Nthara · Software Engineer</title>
+  <meta name="description" content="Blessings Nthara is a software engineer in Campania, Italy, building web platforms, REST APIs and mobile apps with React, Node.js, PHP/Laravel and Docker. MSc in Computer Science (IoT), University of Salerno." />
+  <meta name="author" content="Blessings Nthara" />
+  <link rel="canonical" href="https://www.nthara.com/" />
+  <meta name="theme-color" content="#0A1020" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#F5F7FB" media="(prefers-color-scheme: light)" />
+
+  <!-- Social sharing -->
+  <meta property="og:type" content="profile" />
+  <meta property="og:site_name" content="Blessings Nthara" />
+  <meta property="og:title" content="Blessings Nthara · Software Engineer" />
+  <meta property="og:description" content="Web platforms, REST APIs and mobile apps. MSc in Computer Science (IoT), University of Salerno." />
+  <meta property="og:url" content="https://www.nthara.com/" />
+  <meta property="og:image" content="https://www.nthara.com/img/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Blessings Nthara, Software Engineer" />
+  <meta property="profile:first_name" content="Blessings" />
+  <meta property="profile:last_name" content="Nthara" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Blessings Nthara · Software Engineer" />
+  <meta name="twitter:description" content="Web platforms, REST APIs and mobile apps. MSc in Computer Science (IoT)." />
+  <meta name="twitter:image" content="https://www.nthara.com/img/og-image.png" />
+
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="img/favicon.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+
+  <!-- Apply saved theme before paint to avoid a flash -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+      document.documentElement.classList.add("js");
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Geist:wght@400..600&display=swap" />
+  <link rel="preload" as="image" href="img/profile/blessings-nthara-640.webp" type="image/webp" />
+  <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="css/main.css" />
-  <link rel="stylesheet" href="css/media.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
-    integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Blessings Nthara",
+    "jobTitle": "Software Engineer",
+    "url": "https://www.nthara.com/",
+    "image": "https://www.nthara.com/img/profile/blessings-nthara-640.jpg",
+    "email": "mailto:blessings@nthara.com",
+    "worksFor": { "@type": "Organization", "name": "BlueNet S.r.l." },
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "Università degli Studi di Salerno" },
+      { "@type": "CollegeOrUniversity", "name": "Pamukkale University" }
+    ],
+    "address": { "@type": "PostalAddress", "addressRegion": "Campania", "addressCountry": "IT" },
+    "knowsAbout": ["JavaScript", "TypeScript", "React", "React Native", "Node.js", "PHP", "Laravel", "REST APIs", "Docker", "Internet of Things"],
+    "sameAs": [
+      "https://github.com/Blessings-Nthara",
+      "https://www.linkedin.com/in/blessings-nthara-43141270"
+    ]
+  }
+  </script>
 </head>
 
 <body>
-  <div id="preloader">
-    <div class="jumping-dots">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-  </div>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <header id="header" class="header">
-    <div class="container container-lg">
-      <div class="header-nav">
-        <a href="#home" class="logo">B<span>.</span>Nthara</a>
-        <nav id="nav" class="nav">
-          <ul class="nav-list">
-            <li class="nav-item">
-              <a href="#home" class="nav-link active">Home</a>
-            </li>
-            <li class="nav-item">
-              <a href="#about" class="nav-link">About</a>
-            </li>
+  <!-- SVG icon sprite -->
+  <svg width="0" height="0" class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.29-1.69-1.29-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.7 5.39-5.27 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M3 6.5A1.5 1.5 0 0 1 4.5 5h15A1.5 1.5 0 0 1 21 6.5v11a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5v-11Zm0 .5 9 6.5L21 7"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.2M12 19.8V22M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2 12h2.2M19.8 12H22M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"/></g></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7Z"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="8.5" y="8.5" width="12" height="12" rx="2"/><path d="M15.5 8.5V5a1.5 1.5 0 0 0-1.5-1.5H5A1.5 1.5 0 0 0 3.5 5v9A1.5 1.5 0 0 0 5 15.5h3.5"/></g></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
+  </svg>
 
-            <li class="nav-item">
-              <a href="#contact" class="nav-link">Contact</a>
-            </li>
-          </ul>
-          <button id="nav-btn" class="nav-btn">
-            <img id="nav-btn-img" src="img/icons/open.svg" alt="Navigation button" />
-          </button>
-        </nav>
+  <header class="site-header" id="top">
+    <nav class="nav" aria-label="Primary">
+      <a href="#home" class="brand" aria-label="Blessings Nthara, back to top">
+        <span class="brand-mark" aria-hidden="true">BN</span>
+        <span class="brand-name">Blessings Nthara</span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#education">Education</a></li>
+        <li class="nav-links-cta"><a href="#contact" class="btn btn-small btn-primary">Get in touch</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch to light theme">
+          <svg class="icon icon-sun" aria-hidden="true"><use href="#i-sun" /></svg>
+          <svg class="icon icon-moon" aria-hidden="true"><use href="#i-moon" /></svg>
+        </button>
+        <button class="icon-btn menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+          <span class="menu-bars" aria-hidden="true"></span>
+        </button>
       </div>
-    </div>
+    </nav>
   </header>
 
-  <section id="home" class="hero">
-    <div class="container container-lg">
-      <div class="hero-row" data-aos="fade-zoom-in" data-aos-easing="ease-in-out" data-aos-delay="1800"
-        data-aos-duration="2000">
-        <div class="hero-content">
-          <span class="hero-greeting"> Hello, I am</span>
-          <h1 class="hero-heading">Blessings Nthara</h1>
-          <span class="hero-heading-subtitle">Software Engineer with a Master's Degree in Computer Science, specializing
-            in Internet of Things (IoT)
-          </span>
-          <div class="about-social-list">
-            <div class="social-links-row">
-              <a href="https://github.com/Blessings-Nthara">
-                <img src="img/social_icons/github.svg" alt="Link to GitHub account" />
-              </a>
+  <main id="main">
+    <!-- Hero -->
+    <section id="home" class="hero" aria-labelledby="hero-title">
+      <canvas class="hero-mesh" id="hero-mesh" aria-hidden="true"></canvas>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="status"><span class="led" aria-hidden="true"></span>Software Engineer at BlueNet S.r.l.</p>
+          <h1 id="hero-title" class="hero-title">Blessings Nthara</h1>
+          <p class="hero-lede">
+            I build web platforms end to end: interfaces people enjoy using, APIs other systems can depend on,
+            and the containers that keep them running. Trained in computer engineering, with a master’s in the Internet of Things.
+          </p>
+          <div class="hero-actions">
+            <a href="#work" class="btn btn-primary">View my work</a>
+            <a href="#contact" class="btn btn-ghost">Contact me</a>
+            <!-- To add a CV: place cv.pdf in /docs and uncomment:
+            <a href="docs/cv.pdf" class="btn btn-ghost" download>Download CV</a> -->
+          </div>
+          <ul class="hero-social" aria-label="Profiles">
+            <li><a href="https://github.com/Blessings-Nthara" target="_blank" rel="noopener" aria-label="GitHub profile"><svg class="icon" aria-hidden="true"><use href="#i-github" /></svg></a></li>
+            <li><a href="https://www.linkedin.com/in/blessings-nthara-43141270" target="_blank" rel="noopener" aria-label="LinkedIn profile"><svg class="icon" aria-hidden="true"><use href="#i-linkedin" /></svg></a></li>
+            <li><a href="mailto:blessings@nthara.com" aria-label="Email blessings@nthara.com"><svg class="icon" aria-hidden="true"><use href="#i-mail" /></svg></a></li>
+          </ul>
+        </div>
 
-              <a href="https://www.linkedin.com/in/blessings-nthara-43141270">
-                <img src="img/social_icons/linkedin.svg" alt="Link to linkedin profile" />
-              </a>
+        <figure class="portrait">
+          <div class="portrait-frame">
+            <picture>
+              <source type="image/webp" srcset="img/profile/blessings-nthara-320.webp 320w, img/profile/blessings-nthara-640.webp 640w" sizes="(max-width: 860px) 240px, 380px" />
+              <img src="img/profile/blessings-nthara-640.jpg" srcset="img/profile/blessings-nthara-320.jpg 320w, img/profile/blessings-nthara-640.jpg 640w" sizes="(max-width: 860px) 240px, 380px" width="640" height="640" alt="Portrait of Blessings Nthara by the sea" fetchpriority="high" />
+            </picture>
+          </div>
+          <figcaption class="portrait-tag"><span class="led" aria-hidden="true"></span>Campania, Italy</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="section-head reveal">
+          <h2 id="about-title" class="section-title">About me</h2>
+        </div>
+        <div class="about-body reveal">
+          <p class="lead-para">
+            I’m a software engineer who likes the whole path a request travels, from the button someone taps to the
+            database row it changes.
+          </p>
+          <p>
+            I studied Computer Engineering at Pamukkale University in Türkiye, then completed a Master’s in Computer
+            Science at the University of Salerno, specialising in the Internet of Things and graduating with 108/110.
+            Along the way I’ve worked in development teams in both countries, and today I’m a software engineer at
+            BlueNet S.r.l., building web platforms, admin interfaces and the APIs that connect them to other systems.
+          </p>
+          <p>
+            Working across languages, countries and codebases has made me quick to learn new tools and careful about
+            the things that make software last: clear interfaces, honest documentation, and code the next person can
+            pick up.
+          </p>
+        </div>
+        <dl class="facts reveal">
+          <div><dt>Focus</dt><dd>Full-stack web, APIs, mobile</dd></div>
+          <div><dt>Specialisation</dt><dd>Internet of Things</dd></div>
+          <div><dt>Based in</dt><dd>Campania, Italy</dd></div>
+          <div><dt>Worked in</dt><dd>Italy and Türkiye</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section section-alt" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 id="skills-title" class="section-title">Technical skills</h2>
+          <p class="section-intro">The tools I reach for, grouped by where they sit in the stack.</p>
+        </div>
+
+        <div class="stack reveal">
+          <article class="stack-layer">
+            <h3>Interfaces</h3>
+            <p>Responsive web and mobile front ends.</p>
+            <ul class="chips">
+              <li>React</li><li>React Native</li><li>JavaScript</li><li>TypeScript</li><li>HTML</li><li>CSS</li>
+            </ul>
+          </article>
+          <article class="stack-layer">
+            <h3>Services and APIs</h3>
+            <p>Server-side logic and the contracts between systems.</p>
+            <ul class="chips">
+              <li>Node.js</li><li>PHP</li><li>Laravel</li><li>REST APIs</li><li>OpenAPI / Swagger</li><li>Java</li>
+            </ul>
+          </article>
+          <article class="stack-layer">
+            <h3>Data</h3>
+            <p>Relational storage and the structures behind it.</p>
+            <ul class="chips">
+              <li>MySQL</li><li>Data structures</li><li>C</li>
+            </ul>
+          </article>
+          <article class="stack-layer">
+            <h3>Infrastructure and tooling</h3>
+            <p>Shipping and running software reliably.</p>
+            <ul class="chips">
+              <li>Docker</li><li>Linux</li><li>Ubuntu</li><li>Git</li><li>GitHub</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section" aria-labelledby="experience-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 id="experience-title" class="section-title">Experience</h2>
+        </div>
+
+        <ol class="timeline">
+          <li class="timeline-item is-current reveal">
+            <div class="timeline-when">2024 – present</div>
+            <div class="timeline-body">
+              <h3>Software Engineer <span class="at">BlueNet S.r.l.</span></h3>
+              <p class="where">Arzano, Italy</p>
+              <p>
+                Building web platforms for BlueNet’s clients: admin front ends, REST APIs with OpenAPI documentation,
+                containerised services, and integrations with third-party systems.
+              </p>
+              <ul class="chips chips-quiet"><li>React</li><li>Node.js</li><li>OpenAPI</li><li>Docker</li></ul>
             </div>
-          </div>
-
-          <div>
-            <a href="#contact" class="btn btn-white">Contact Me</a>
-          </div>
-        </div>
-        <div class="hero-img">
-          <img src="img/BlessingsNthara/BlessingsNthara.png" alt="Blessings Nthara</a>
-              " />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="about" class="about">
-    <div class="container">
-      <div class="about-title">
-        <h2 class="title">About Me</h2>
-      </div>
-      <div class="about-row">
-        <div class="about-content">
-          <p class="about-descr">
-            I hold a Master's Degree in Computer Science from the University of Salerno (Italy), specializing in the Internet of Things (IoT), where I achieved a mark of 108 out of 110. Prior to that, I completed a Bachelor of Science in Computer Engineering from Pamukkale University (Turkey). As an enthusiastic software engineer, I possess a strong foundation in software engineering and programming principles. I have an innate ability to learn and master new technologies.
- <br />
-            <br />
-
-          </p>
-        </div>
-        <div class="about-skills">
-          <div class="skill">
-            <div class="skill">
-              <div class="skill-title">JavaScript</div>
-              <div class="skill-percent">90%</div>
-              <div class="skillbar" style="width: 90%"></div>
+          </li>
+          <li class="timeline-item reveal">
+            <div class="timeline-when">2022 – 2024</div>
+            <div class="timeline-body">
+              <h3>Software Engineer <span class="at">AutoOne</span></h3>
+              <p class="where">Salerno, Italy</p>
             </div>
-            <div class="skill-title">React JS</div>
-            <div class="skill-percent">85%</div>
-            <div class="skillbar" style="width: 85%"></div>
-          </div>
-          <div class="skill">
-            <div class="skill-title">React Native</div>
-            <div class="skill-percent">80%</div>
-            <div class="skillbar" style="width: 80%"></div>
-          </div>
-          <div class="skill">
-            <div class="skill-title">Node JS</div>
-            <div class="skill-percent">75%</div>
-            <div class="skillbar" style="width: 75%"></div>
-          </div>
-          <div class="skill">
-            <div class="skill-title">TypeScript</div>
-            <div class="skill-percent">70%</div>
-            <div class="skillbar" style="width: 70%"></div>
-          </div>
-          <div class="skill">
-            <div class="skill-title">PHP</div>
-            <div class="skill-percent">75%</div>
-            <div class="skillbar" style="width: 75%"></div>
-          </div>
-          <div class="skill">
-            <div class="skill-title">Docker</div>
-            <div class="skill-percent">65%</div>
-            <div class="skillbar" style="width: 65%"></div>
-          </div>
-        </div>
-
+          </li>
+          <li class="timeline-item reveal">
+            <div class="timeline-when">2020 – 2021</div>
+            <div class="timeline-body">
+              <h3>Software Developer <span class="at">proxolab</span></h3>
+              <p class="where">Türkiye</p>
+            </div>
+          </li>
+          <li class="timeline-item reveal">
+            <div class="timeline-when">2020</div>
+            <div class="timeline-body">
+              <h3>Web Developer <span class="at">NETADIM</span></h3>
+              <p class="where">Türkiye</p>
+            </div>
+          </li>
+        </ol>
       </div>
-      <div class="services-row">
-        <!-- Frontend Development -->
-        <div class="service-card" data-aos="fade-down">
-          <img class="service-card-img" src="img/services/01.svg" alt="Frontend Development" />
-          <h3 class="service-card-title">Frontend Development</h3>
-          <p>
-            I build responsive and user-friendly interfaces using React.js, along with HTML, CSS, and JavaScript,
-            ensuring a smooth and efficient user experience across devices.
-          </p>
+    </section>
+
+    <!-- Work -->
+    <section id="work" class="section section-alt" aria-labelledby="work-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 id="work-title" class="section-title">Work</h2>
+          <p class="section-intro">What I build, and where you can see it.</p>
         </div>
 
-        <!-- Backend Development -->
-        <div class="service-card" data-aos="fade-down">
-          <img class="service-card-img" src="img/services/02.svg" alt="Backend Development" />
-          <h3 class="service-card-title">Backend Development</h3>
-          <p>
-            I work with Node.js and PHP, including the Laravel framework, to build reliable and scalable server-side
-            applications that meet performance and security requirements for web applications.
-          </p>
-        </div>
+        <div class="work-grid">
+          <article class="work-feature reveal">
+            <div class="work-preview" aria-hidden="true">
+              <div class="preview-bar"><span></span><span></span><span></span><em>nthara.com</em></div>
+              <div class="preview-body">
+                <div class="preview-line w60"></div>
+                <div class="preview-line w90 big"></div>
+                <div class="preview-line w75"></div>
+                <div class="preview-pills"><span></span><span></span></div>
+              </div>
+            </div>
+            <div class="work-copy">
+              <h3>nthara.com</h3>
+              <p>
+                This site. A dependency-free static portfolio: semantic HTML, a token-based light and dark theme,
+                a canvas animation that pauses when off screen or when reduced motion is on, and structured data for search.
+              </p>
+              <ul class="chips chips-quiet"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Canvas</li><li>GitHub Pages</li></ul>
+              <div class="work-links">
+                <a href="https://github.com/Blessings-Nthara?tab=repositories" target="_blank" rel="noopener" class="text-link">
+                  Browse my repositories <svg class="icon icon-sm" aria-hidden="true"><use href="#i-external" /></svg>
+                </a>
+              </div>
+            </div>
+          </article>
 
-        <!-- API Development -->
-        <div class="service-card" data-aos="fade-down">
-          <img class="service-card-img" src="img/services/03.svg" alt="API Development" />
-          <h3 class="service-card-title">API Development</h3>
-          <p>
-            I develop clean and efficient RESTful APIs that allow seamless communication between frontend and backend
-            systems, ensuring ease of integration with external services when needed.
-          </p>
+          <!--
+            To add a project, copy this block:
+            <article class="work-card reveal">
+              <h3>Project name</h3>
+              <p>What it does and what you did.</p>
+              <ul class="chips chips-quiet"><li>Tech</li></ul>
+              <div class="work-links">
+                <a href="https://github.com/..." class="text-link" target="_blank" rel="noopener">Source</a>
+                <a href="https://..." class="text-link" target="_blank" rel="noopener">Live demo</a>
+              </div>
+            </article>
+          -->
+
+          <article class="work-card reveal">
+            <h3>Front ends</h3>
+            <p>
+              Responsive, user-friendly interfaces in React and React Native, from admin dashboards to mobile apps,
+              built to work smoothly on every screen size.
+            </p>
+          </article>
+          <article class="work-card reveal">
+            <h3>Back ends</h3>
+            <p>
+              Server-side applications in Node.js and PHP with Laravel, built to meet the performance and security
+              requirements of production web apps.
+            </p>
+          </article>
+          <article class="work-card reveal">
+            <h3>APIs and integrations</h3>
+            <p>
+              Clean RESTful APIs, documented with OpenAPI, that let front ends, back ends and external services talk
+              to each other without surprises.
+            </p>
+          </article>
         </div>
       </div>
+    </section>
 
-
-
-    </div>
-  </section>
-
-
-
-  <section id="contact" class="contact">
-    <div class="container">
-      <div class="contact-title">
-        <h2 class="title">Contact</h2>
-      </div>
-      <div class="contact-content">
-        <p>
-          Tell me about your project.
-          <br />
-          Let's talk and work together!
-        </p>
-        <p>Email: <a href="mailto:blessings@nthara.com">blessings@nthara.com</a></p>
-      </div>
-    </div>
-  </section>
-  <style>
-    .verse-section {
-      background-color: white;
-      padding: 40px 0;
-      text-align: center;
-      font-family: 'Arial', sans-serif;
-    }
-
-    .verse-section .container {
-      width: 80%;
-      max-width: 800px;
-      margin: 0 auto;
-
-    }
-
-    .verse {
-            font-size: 24px;
-            font-family: 'Georgia', serif;
-            color: #2980b9;
-            font-weight: bold;
-            margin-top: 20px;
-            line-height: 1.5;
-            letter-spacing: 1px;
-            text-align: center;
-            border-left: 5px solid #2980b9;
-            padding-left: 20px;
-            font-style: italic;
-        }
-
-        .reference {
-            font-size: 16px;
-            color: #777;
-            margin-top: 10px;
-            font-style: normal;
-            font-weight: normal;
-        }
-  </style>
-
-  <section id="verse-section" class="verse-section">
-    <div class="container">
-      <p class="verse" style=" font-size: 20px;
-            color: #555;">
-        Trust in the Lord with all your heart; do not depend on your own understanding. Seek his will in all you do, and
-        he will show you which path to take.
-      </p>
-      <p class="reference">— Proverbs 3:5–6 (NLT)</p>
-    </div>
-  </section>
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-row">
-        <div class="social-links-row footer-social">
-          <a href="https://github.com/Blessings-Nthara">
-            <img src="img/social_icons/github.svg" alt="Link to GitHub account" />
-          </a>
-
-          <a href="https://www.linkedin.com/in/blessings-nthara-43141270">
-            <img src="img/social_icons/linkedin.svg" alt="Link to linkedin profile" />
-          </a>
+    <!-- Education -->
+    <section id="education" class="section" aria-labelledby="education-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 id="education-title" class="section-title">Education</h2>
         </div>
-
-        <div class="footer-copyright">
-          <p>&copy; Copyright Blessings Nthara 2025 </p>
+        <div class="edu-grid">
+          <article class="edu reveal">
+            <p class="edu-years">2021 – 2023</p>
+            <h3>Master’s in Computer Science</h3>
+            <p class="edu-school">Università degli Studi di Salerno, Italy</p>
+            <p>Specialisation in the Internet of Things.</p>
+            <p class="edu-grade"><strong>108</strong><span>/110</span> final mark</p>
+          </article>
+          <article class="edu reveal">
+            <p class="edu-years">2013 – 2018</p>
+            <h3>Bachelor of Science in Computer Engineering</h3>
+            <p class="edu-school">Pamukkale University, Türkiye</p>
+            <p>Foundations in programming, data structures and operating systems.</p>
+          </article>
         </div>
+        <!-- Certifications: add a .edu article here when you have one to list. -->
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact-panel reveal">
+          <div class="contact-copy">
+            <h2 id="contact-title" class="contact-title">Let’s build something that works.</h2>
+            <p>
+              Hiring for an engineering role, planning a product, or looking for a developer to join a project?
+              Send me a note and I’ll get back to you.
+            </p>
+          </div>
+          <div class="contact-actions">
+            <div class="email-row">
+              <a class="btn btn-primary btn-large" href="mailto:blessings@nthara.com">
+                <svg class="icon" aria-hidden="true"><use href="#i-mail" /></svg>blessings@nthara.com
+              </a>
+              <button class="icon-btn copy-btn" type="button" id="copy-email" data-email="blessings@nthara.com" aria-label="Copy email address">
+                <svg class="icon" aria-hidden="true"><use href="#i-copy" /></svg>
+              </button>
+            </div>
+            <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
+            <ul class="contact-links">
+              <li><a href="https://www.linkedin.com/in/blessings-nthara-43141270" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-linkedin" /></svg>LinkedIn</a></li>
+              <li><a href="https://github.com/Blessings-Nthara" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-github" /></svg>GitHub</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <blockquote class="verse">
+        <p>Trust in the Lord with all your heart; do not depend on your own understanding. Seek his will in all you do, and he will show you which path to take.</p>
+        <cite>Proverbs 3:5–6 (NLT)</cite>
+      </blockquote>
+      <div class="footer-meta">
+        <p>&copy; <span id="year">2026</span> Blessings Nthara</p>
+        <a href="#home" class="text-link">Back to top</a>
       </div>
     </div>
   </footer>
 
-  <div id="goToTop" class="goToTop">
-    <a href="#home">
-      <img src="img/icons/arrow_up.svg" alt="Back to top" /></a>
-  </div>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
-    integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="js/main.js"></script>
+  <script src="js/main.js" defer></script>
 </body>
-
 </html>
