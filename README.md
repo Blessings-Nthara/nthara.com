@@ -9,7 +9,7 @@ A dependency-free static site (HTML, CSS, vanilla JS) served by GitHub Pages.
 - `index.html` — all content and SEO metadata (Open Graph, JSON-LD)
 - `css/main.css` — design tokens (dark default, light theme), layout and responsive rules
 - `js/main.js` — theme toggle, mobile menu, scroll-spy, reveal-on-scroll, hero mesh canvas, copy email
-- `img/` — optimised portrait (WebP + JPEG), favicon, social preview image
+- `img/` — favicon, social preview image
 
 ## Editing content
 

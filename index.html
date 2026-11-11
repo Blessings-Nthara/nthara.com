@@ -19,7 +19,7 @@
   <meta property="og:image" content="https://www.nthara.com/img/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Blessings Nthara, Software Engineer" />
+  <meta property="og:image:alt" content="Blessings Nthara, Software Engineer: web platforms, APIs and IoT" />
   <meta property="profile:first_name" content="Blessings" />
   <meta property="profile:last_name" content="Nthara" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -46,7 +46,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Geist:wght@400..600&display=swap" />
-  <link rel="preload" as="image" href="img/profile/blessings-nthara-640.webp" type="image/webp" />
   <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="css/main.css" />
 
@@ -57,7 +56,6 @@
     "name": "Blessings Nthara",
     "jobTitle": "Software Engineer",
     "url": "https://www.nthara.com/",
-    "image": "https://www.nthara.com/img/profile/blessings-nthara-640.jpg",
     "email": "mailto:blessings@nthara.com",
     "worksFor": { "@type": "Organization", "name": "BlueNet S.r.l." },
     "alumniOf": [
@@ -141,14 +139,47 @@
           </ul>
         </div>
 
-        <figure class="portrait">
-          <div class="portrait-frame">
-            <picture>
-              <source type="image/webp" srcset="img/profile/blessings-nthara-320.webp 320w, img/profile/blessings-nthara-640.webp 640w" sizes="(max-width: 860px) 240px, 380px" />
-              <img src="img/profile/blessings-nthara-640.jpg" srcset="img/profile/blessings-nthara-320.jpg 320w, img/profile/blessings-nthara-640.jpg 640w" sizes="(max-width: 860px) 240px, 380px" width="640" height="640" alt="Portrait of Blessings Nthara by the sea" fetchpriority="high" />
-            </picture>
+        <figure class="trace" aria-labelledby="trace-caption">
+          <div class="trace-head">
+            <p class="trace-req"><span class="trace-method">POST</span> /api/v1/orders</p>
+            <p class="trace-status"><span class="trace-ok" aria-hidden="true"></span>201 Created</p>
           </div>
-          <figcaption class="portrait-tag"><span class="led" aria-hidden="true"></span>Campania, Italy</figcaption>
+          <ol class="trace-spans">
+            <li style="--start:0;--len:100" class="span-root">
+              <span class="span-name">Request<small>Docker container</small></span>
+              <span class="span-track"><span class="span-bar"></span></span>
+              <span class="span-ms">184 ms</span>
+            </li>
+            <li style="--start:0;--len:14">
+              <span class="span-name">Interface<small>React</small></span>
+              <span class="span-track"><span class="span-bar"></span></span>
+              <span class="span-ms">26 ms</span>
+            </li>
+            <li style="--start:12;--len:22">
+              <span class="span-name">API gateway<small>Node.js</small></span>
+              <span class="span-track"><span class="span-bar"></span></span>
+              <span class="span-ms">41 ms</span>
+            </li>
+            <li style="--start:30;--len:48">
+              <span class="span-name">Service<small>Laravel</small></span>
+              <span class="span-track"><span class="span-bar"></span></span>
+              <span class="span-ms">88 ms</span>
+            </li>
+            <li style="--start:52;--len:20" class="span-key">
+              <span class="span-name">Database write<small>MySQL</small></span>
+              <span class="span-track"><span class="span-bar"></span></span>
+              <span class="span-ms">37 ms</span>
+            </li>
+            <li style="--start:80;--len:20">
+              <span class="span-name">Response<small>OpenAPI contract</small></span>
+              <span class="span-track"><span class="span-bar"></span></span>
+              <span class="span-ms">36 ms</span>
+            </li>
+          </ol>
+          <figcaption class="trace-foot" id="trace-caption">
+            <span>One request, end to end: the layers I design, build and run.</span>
+            <span class="trace-where">Campania, Italy</span>
+          </figcaption>
         </figure>
       </div>
     </section>
@@ -294,7 +325,7 @@
               <h3>nthara.com</h3>
               <p>
                 This site. A dependency-free static portfolio: semantic HTML, a token-based light and dark theme,
-                a canvas animation that pauses when off screen or when reduced motion is on, and structured data for search.
+                a request-trace hero, a canvas animation that pauses when off screen or when reduced motion is on, and structured data for search.
               </p>
               <ul class="chips chips-quiet"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Canvas</li><li>GitHub Pages</li></ul>
               <div class="work-links">
